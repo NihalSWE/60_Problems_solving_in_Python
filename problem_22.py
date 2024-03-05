@@ -1,4 +1,4 @@
-# Exercise 22
+# Exercise 22  **
 # Write a Python program, enter two numbers from the user and find the greatest common divisor using the for loop.
 
 m=int(input("Enter the first number: "))
