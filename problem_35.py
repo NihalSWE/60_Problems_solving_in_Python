@@ -2,8 +2,8 @@
 # Write a Python program to declare an array, then grab its elements from user and find the largest and second largest element in this array.
 
 arr=[]
-n=int(input("Enter the limit: "))
-first_ele=max1=max2=int(input("ENter first element: "))
+n=int(input("Enter the limit of the array: "))
+first_ele=max1=max2=int(input("Enter first element: "))
 for i in range(2,n+1):
     ele=int(input(f"Enter {i} element :"))
     arr.append(ele)
