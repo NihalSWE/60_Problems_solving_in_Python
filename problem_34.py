@@ -6,7 +6,7 @@
 arr=[]
 
 n=int(input("Enter the limit: "))
-first_ele=max=min=int(input("Enter first number: "))
+first_ele=max=min=int(input("Enter first element: "))
 for i in range(2,n+1): # If you can get max and min directly the you use(1,n+1) instead of (2,n+1)
     ele=int(input(f"Enter {i} element :"))
     arr.append(ele)
