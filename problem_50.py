@@ -20,7 +20,7 @@ class Account:
     def get_balance(self):
         return self.balance
     
-    def deposite(self,amount):
+    def deposit(self,amount):
         self.balance += amount
 
     def withdraw(self,amount):
@@ -33,30 +33,6 @@ class Account:
     def Add_interest(self,interest_rate):
         self.balance = self.balance * (1 + interest_rate)
 
-
-class Account:
-    # Constructor to set the initial balance
-    def __init__(self, initial_balance=0):
-        self.balance = initial_balance
-    
-    # Method to get the current balance
-    def getBalance(self):
-        return self.balance
-    
-    # Method to deposit money
-    def deposit(self, amount):
-        self.balance += amount
-    
-    # Method to withdraw money
-    def withdraw(self, amount):
-        if amount <= self.balance:
-            self.balance -= amount
-        else:
-            print("Insufficient funds")
-    
-    # Method to add interest to the account
-    def add_Interest(self, interest_rate):
-        self.balance *= (1 + interest_rate)
 
 # Get initial balance from the user
 initial_balance = float(input("Enter the initial balance for the account: "))
@@ -75,25 +51,25 @@ while True:
 
     if choice == '1':
         # Option 1: Show current balance
-        print(f"Your current balance is: ${account.getBalance():.2f}")
+        print(f"Your current balance is: ${account.get_balance():.2f}")
     
     elif choice == '2':
         # Option 2: Deposit money
         amount = float(input("Enter the amount to deposit: $"))
         account.deposit(amount)
-        print(f"Deposited ${amount:.2f}. Your new balance is: ${account.getBalance():.2f}")
+        print(f"Deposited ${amount:.2f}. Your new balance is: ${account.get_balance():.2f}")
     
     elif choice == '3':
         # Option 3: Withdraw money
         amount = float(input("Enter the amount to withdraw: $"))
         account.withdraw(amount)
-        print(f"Your new balance is: ${account.getBalance():.2f}")
+        print(f"Your new balance is: ${account.get_balance():.2f}")
     
     elif choice == '4':
         # Option 4: Add interest
         interest_rate = float(input("Enter the interest rate (e.g., 0.05 for 5%): "))
-        account.add_Interest(interest_rate)
-        print(f"Interest added. Your new balance is: ${account.getBalance():.2f}")
+        account.Add_interest(interest_rate)
+        print(f"Interest added. Your new balance is: ${account.get_balance():.2f}")
     
     elif choice == '5':
         # Option 5: Exit
